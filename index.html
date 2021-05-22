@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+  <title> Save Trees </title>
+  
+</head>
+  <body>
+    <p id="heading">My family</p>
+    <p> click next to see family members </p>
+    <audio id= "audio" src="https://mahdihat791.github.io/v2/test.mp3"></audio>
+   <img id="album" src="family cover page.jpg">
+    <div> 
+ <button type="button" onclick="nextslide()">Next </button>
+  </div>
+    <p id="reasontext">""</p>
+  </body>
+
+  <style>
+      body{
+  text-align:center;  
+}
+#heading{
+ font-size:50px;
+  word-spacing:10px;
+  font-variant:small-caps; 
+}
+#reasontext{
+  font-size:45px;
+}
+#album{
+  border-style:solid;
+  border-color:#FFEA00; 
+  border:1px
+    border-radius:80px;
+  padding:5px;
+ width:450px;
+}
+  </style>
+  <script>
+      var reasons=[
+"Mother",
+  "Father",
+  "grandma",
+  "grandpa"
+  "siblings"
+];
+var links=[
+  "img src=mother.jpg",
+  "img src=father.jpg",
+"img src=grandma.png",
+  "img src= grandpa.webp", 
+  "img src= siblings.png"
+];
+var i=0; 
+function nextslide(){
+  document.getElementById("reasontext").innerHTML=reasons[i];
+  document.getElementById("album").src=links[i];
+  i++;
+  document.getElementById("audio").play();
+}
+  </script>
+</html>
